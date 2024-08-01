@@ -1,0 +1,12 @@
+[Unit]
+	Description=ZeroW Motion Camera Autostart on Boot
+	After=network.target
+
+	[Service]
+	ExecStart=/usr/bin/python /home/jakob/src/zerow-motion-cam/main.py
+	Restart=always
+	User=jakob
+
+	[Install]
+	WantedBy=multi-user.target
+
